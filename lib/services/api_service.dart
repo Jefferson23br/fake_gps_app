@@ -3,13 +3,10 @@ import 'package:http/http.dart' as http;
 import '../models/point.dart';
 
 class ApiService {
-  // 👉 IP público da sua VPS
   final String baseUrl = "http://72.60.61.215:8001";
 
-  /// Busca rota entre origem e destino usando o backend
   Future<List<Point>> getRoute(
       double startLat, double startLon, double endLat, double endLon) async {
-    // ⚠️ Backend espera "lon,lat"
     final url = Uri.parse(
         "$baseUrl/route/?origin=$startLon,$startLat&destination=$endLon,$endLat");
 
@@ -33,9 +30,8 @@ class ApiService {
     }
   }
 
-  /// Envia rota para interpolação
   Future<List<Point>> interpolate(List<Point> route) async {
-    final url = Uri.parse("$baseUrl/interpolate/"); // <-- Corrigido
+    final url = Uri.parse("$baseUrl/interpolate/");
 
     print("🚀 Chamando: $url");
 
@@ -55,10 +51,10 @@ class ApiService {
     }
   }
 
-  /// Inicia simulação de rota
+
   Future<Map<String, dynamic>> simulate(
       List<Point> points, double speedKmh) async {
-    final url = Uri.parse("$baseUrl/simulate/"); // <-- Corrigido
+    final url = Uri.parse("$baseUrl/simulate/"); 
 
     print("🚀 Chamando: $url");
 

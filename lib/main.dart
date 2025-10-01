@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'screens/api_test_page.dart';
+import 'screens/map_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,10 +14,10 @@ class MyApp extends StatelessWidget {
       title: 'Fake GPS App',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        colorSchemeSeed: Colors.blue,
         useMaterial3: true,
       ),
-      home: const ApiTestPage(),
+      home: const MapScreen(), 
     );
   }
 }
