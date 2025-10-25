@@ -8,7 +8,7 @@ import '../services/api_service.dart';
 import '../models/point.dart';
 
 
-const String kGoogleApiKey = 'wfbVZsoJMI5RVW823qQ8vizmS27Hs';
+const String kGoogleApiKey = 'AIzaSyBD_-wfbVZsoJMI5RVW823qQ8vizmS27Hs';
 
 
 const String _placesAutocompleteUrl =
